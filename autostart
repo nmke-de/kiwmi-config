@@ -1,0 +1,11 @@
+#!/bin/bash
+wbg $HOME/.config/lock_image &
+dunst 2>/dev/null &
+pipewire &
+pipewire-pulse &
+pipewire-media-session &
+#pactl set-sink-volume 0 25%
+amixer -D pipewire set Master 25%
+batm &
+datem &
+foot 
