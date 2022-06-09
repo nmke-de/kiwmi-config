@@ -14,7 +14,7 @@ action = {
 	["a"]	= "foot alsamixer",
 	["C"]	= "XKB_DEFAULT_LAYOUT=de cage foot",
 	["S"]	= "XKB_DEFAULT_LAYOUT=de cage sway-kiwmi",
-	["f"]	= "foot -W 100x30 aerc"
+	["f"]	= "foot -W 100x30 aerc",
 	["F11"]	= "kiwmi_fullscreen",
 	["Escape"]	= "kiwmic 'kiwmi:unfocus()'",
 }
