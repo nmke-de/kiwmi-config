@@ -1,7 +1,7 @@
 action = {
 	["E"]	= "kixit",
 	["Return"] = "foot",
-	["r"]	= "dmenu-wl_run",
+	["r"]	= "$(dmenu_path | dmenu-wl)",
 	["q"]	= "kiwmic 'v = kiwmi:focused_view() if v then v:close() end'",
 	["F"]	= "foot filet",
 	["s"]	= "notify-send \"New Screenshot\" $(gg $(echo \"all\ncurrent\nselection\nwindow\" | dmenu-wl))",
