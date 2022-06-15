@@ -1,6 +1,6 @@
 M = {}
 
-hidden = {}
+hidden = {["next"] = nil}
 last_hidden = hidden
 
 M.hide = function (v) 
@@ -13,7 +13,7 @@ end
 
 M.show = function ()
 	-- TODO fix this!
-	if hidden.view == nil then return end
+	if hidden == last_hidden then return end
 	hidden.view:show()
 	OUTPUT:redraw()
 	hidden = hidden.next
