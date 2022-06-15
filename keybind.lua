@@ -21,8 +21,6 @@ action = {
 
 action_native = {
 	["l"]	= "locked = true; kiwmi:spawn('foot -a vlock vlock')",
-	--["l"]	= "locked = true; kiwmi:spawn('XKB_DEFAULT_LAYOUT=de cage gtklock-cage')",
-	--["l"]	= "locked = true; kiwmi:spawn('XKB_DEFAULT_LAYOUT=de sway -c ~/.config/sway/config4')",
 	["m"]	= "hide.hide(kiwmi:focused_view()); kiwmi:unfocus()",
 	["M"]	= "hide.show()",
 	[UNBINDKEY]	= "unbind = true",
