@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kiwmic 't=kiwmi:active_output():usable_area(); kiwmi:focused_view():move(t.x,t.y); kiwmi:focused_view():resize(t.width,t.height)'

@@ -1,0 +1,4 @@
+#!/bin/sh
+yn=$(echo -e "Yes\nNo" | dmenu-wl)
+[ $yn = "Yes" ] && kiwmic 'kiwmi:quit()'
+
