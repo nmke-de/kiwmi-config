@@ -12,7 +12,6 @@ M.hide = function (v)
 end
 
 M.show = function ()
-	-- TODO fix this!
 	if hidden == last_hidden then return end
 	hidden.view:show()
 	OUTPUT:redraw()
