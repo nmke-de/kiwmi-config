@@ -1,0 +1,3 @@
+#!/bin/sh
+[ -z $DISPLAY ] || st -g 20x2+0+38 -e datemonitor
+[ -z $WAYLAND_DISPLAY ] || foot -W 20x2 datemonitor

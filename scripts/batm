@@ -1,0 +1,3 @@
+#!/bin/sh
+[ -z $DISPLAY ] || st -g 20x3+0+38 -e batmonitor
+[ -z $WAYLAND_DISPLAY ] || foot -W 20x3 batmonitor

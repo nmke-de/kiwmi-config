@@ -1,0 +1,11 @@
+#!/bin/sh
+#paste /sys/class/power_supply/BAT*/status
+#cat /sys/class/power_supply/BAT*/capacity | sed 's/$/%/g'
+
+while true ; do
+	for bat in /sys/class/power_supply/BAT* ; do
+		paste $bat/status $bat/capacity | sed 's/$/%/g';
+	done
+	sleep 60s
+	clear;
+done
