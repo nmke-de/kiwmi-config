@@ -1,0 +1,14 @@
+#!/bin/sh
+# Shortcuts for grimshot (screenshot program for wayland)
+IMG_DUMP=$HOME/Bilder/Screenshots #Where to save your screenshots
+#NAME="%s%N" #Naming convention for files
+NAME="%F-%H%M%S%N" #Naming convention for files
+[ -z $1 ] && grimshot save screen $IMG_DUMP/$(date +$NAME).png && exit 0
+case $1 in
+	"w"|"window") grimshot save window $IMG_DUMP/$(date +$NAME).png;;
+	"a"|"all") grimshot save screen $IMG_DUMP/$(date +$NAME).png;;
+	"c"|"current") grimshot save active $IMG_DUMP/$(date +$NAME).png;;
+	"h"|"help"|"?") cat $0;;
+	"s"|"select"|"selection") grimshot save area $IMG_DUMP/$(date +$NAME).png;;
+	*) echo "Type '$0 help' for more info"
+esac
