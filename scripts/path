@@ -1,0 +1,3 @@
+#!/bin/sh
+ls $(echo $PATH | tr : "\n") | grep -v :$ | grep -v ^$ | sort | uniq
+
