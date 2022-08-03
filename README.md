@@ -12,3 +12,6 @@ Place the files of this repository in `~/.config/kiwmi/`.
 
 Run `kiwmi`, after you have installed the compositor.
 
+### Caveat
+
+Please note that I use a German keyboard. You may want to change that.
