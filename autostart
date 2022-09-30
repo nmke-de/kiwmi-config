@@ -8,4 +8,5 @@ wireplumber &
 amixer -D pipewire set Master 25%
 batm &
 datem &
+scalp &
 foot 
