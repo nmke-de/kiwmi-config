@@ -1,12 +1,11 @@
 #!/bin/bash
-wbg $HOME/.config/lock_image &
-dunst 2>/dev/null &
-pipewire &
-pipewire-pulse &
-wireplumber &
+dsv $(which wbg) $HOME/.config/lock_image &
+dsv $(which dunst) 2>/dev/null &
+dsv $(which pipewire) &
+dsv $(which pipewire-pulse) &
+dsv $(which wireplumber) &
 #pactl set-sink-volume 0 25%
-amixer -D pipewire set Master 25%
-batm &
-datem &
-scalp &
-foot 
+amixer -D pipewire sset Master 25%
+dsv $(which foot) -a batdate -W 20x3 batdate &
+dsv $(which scalp) ~/foo &
+waitpid $!
