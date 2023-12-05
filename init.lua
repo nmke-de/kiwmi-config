@@ -1,4 +1,4 @@
-MODKEY = "Alt_L"
+MODKEY = "Super_L"
 OUTPUT = false
 CURSOR = kiwmi:cursor()
 UNBINDKEY = "XF86Keyboard"
