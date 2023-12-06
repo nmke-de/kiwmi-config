@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# TODO battery status
+
+while true; do
+	batcap=0
+	batcount=$(ls /sys/class/power_supply | grep ^BAT | wc -l)
+	batstatus="Full"
+	for bat in /sys/class/power_supply/BAT* ; do
+		batcap=$((batcap + $(cat $bat/capacity)))
+		bs=$(cat $bat/status)
+		if [ "$batstatus" = "Full" ]; then
+			batstatus="$bs"
+		elif [ "$batstatus" = "Not charging" ]; then
+			[ "$bs" != "Full" ] && batstatus="$bs"
+		elif [ "$batstatus" = "Charging" ]; then
+			[ "$bs" = "Discharging" ] && batstatus="$bs"
+		fi
+		#batstatus="$batstatus+$(cat $bat/status)"
+	done
+	date "+%F %H:%M"
+	echo "$((batcap / batcount))% $batstatus"
+	sleep 15s
+	clear
+done
